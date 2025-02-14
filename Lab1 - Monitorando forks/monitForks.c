@@ -38,6 +38,6 @@ int main(){
     return 0;
 }
 
-//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitorando forks/monitForks.c" ~/CompParalel/
+//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitoração de forks/monitForks.c" ~/CompParalel/
 //clear & gcc monitForks.c -o monitForks & ./monitForks
-//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitorando forks/monitForks.c" ~/CompParalel/ && clear && gcc monitForks.c -o monitForks && ./monitForks
+//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitoração de forks/monitForks.c" ~/CompParalel/ && clear && gcc monitForks.c -o monitForks && ./monitForks
