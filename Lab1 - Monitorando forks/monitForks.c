@@ -1,5 +1,5 @@
 //Caio Vinicius Corsini Filho
-//Exercicio 1
+//Exercicio 2
 
 #include <stdio.h>
 #include <unistd.h>
