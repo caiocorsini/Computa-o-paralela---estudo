@@ -29,8 +29,10 @@ int main(){
             num_processos++; 
     }
 
+    //waitpid(pids[total_processos - 1], &status, 0);
+
     // Espera todos os processos criados terminarem
-    while ((pid = wait(&status)) > 0) {  // Se wait() retornar -1 eh porque nao tem mais filhos para esperar, entao o while para de repetir
+    while (waitpid(-1, &status, 0) > 0) {  // Se wait() retornar -1 eh porque nao tem mais filhos para esperar, entao o while para de repetir
         if (WIFEXITED(status)) {  //WIFEXITED pega o valor de saida desse filho, neste caso o "sleep_time" da funcao exit
             printf("No processo pai: Processo filho %d terminou com código de saída %d\n", pid, WEXITSTATUS(status));
         }
@@ -38,6 +40,6 @@ int main(){
     return 0;
 }
 
-//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitorando forks/monitForks.c" ~/CompParalel/
-//clear & gcc monitForks.c -o monitForks & ./monitForks
-//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitorando forks/monitForks.c" ~/CompParalel/ && clear && gcc monitForks.c -o monitForks && ./monitForks
+//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitorando forks/monitForksWaitPid.c" ~/CompParalel/
+//clear & gcc monitForksWaitPid.c -o monitForksWaitPid & ./monitForksWaitPid
+//cp "/mnt/c/Users/caiof/Documentos disco local/aaaComputacao_faculdade/Computação paralela/Labs/Lab1 - Monitorando forks/monitForksWaitPid.c" ~/CompParalel/ && clear && gcc monitForksWaitPid.c -o monitForksWaitPid && ./monitForksWaitPid
